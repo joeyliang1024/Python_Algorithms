@@ -20,9 +20,10 @@ def merge(A:list, p:int, q:int ,m:int):
         else:
             A[k] = R[j]
             j = j + 1    
-
+"""
 A = [12, 4, 544, 23, 7, 1, 123 ,3]
 B = A.copy()
 merge_sort(B, 0, len(A)-1)
 print(f"Before sorting: {A}")
 print(f"After sorting:  {B}")
+"""
