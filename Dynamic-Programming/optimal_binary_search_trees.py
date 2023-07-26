@@ -7,8 +7,13 @@
 # 搜尋總成本 = 成功搜尋成本 + 失敗搜尋成本
 # 整顆樹的Cost: 左子樹 cost + 右子樹 cost + root cost 
 def OBST(p:list, q:list, n:int):
+    # 存儲部分樹的最小成本，s[i][j] 表示以 ki 到 kj 這些鍵所構成的子樹的最小成本
     s = [[0 for j in range(n + 2)] for i in range(n + 2)]
+    # 存儲部分樹的權重和，w[i][j] 表示以 ki 到 kj 這些鍵為內部節點的部分樹的權重
+    # 和，即包含這些鍵的搜尋成本。
     w = [[0 for j in range(n + 2)] for i in range(n + 2)]
+    # 存儲樹的根節點，root[i][j] 表示以 ki 到 kj 這些鍵所構成的子樹的根節點是哪
+    # 個鍵 (kr)。
     root = [[0 for j in range(n + 1)] for i in range(n + 1)]
     # 初始化矩陣: 填上初始值
     for i in range(1, n + 2):
