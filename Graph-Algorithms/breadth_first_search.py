@@ -23,7 +23,7 @@ def BFS(graph:list, start_vertex:str):
     result = []
     while len(queue) > 0:
         currentVertex = queue.pop(0)
-        result.append(currentVertex.node_name)
+        result.append(currentVertex)
         for neighbor in currentVertex.neighbors:
             for vtx in graph:
                 if vtx.node_name == neighbor and vtx.color == "white":
@@ -43,5 +43,8 @@ graph = [
     vertex("E", "white", float("inf"), None, ["A", "D", "F", "C"]),
     vertex("F", "white", float("inf"), None, ["E"])
 ]
-print(BFS(graph,"A"))
+result = BFS(graph,"A")
+for r in result:
+    print(r.node_name, end = " ")
+print("")    
 #['A', 'B', 'D', 'E', 'C', 'F']
