@@ -10,7 +10,7 @@
 #               ---------
 # P |       a b | a b a | a
 #               ---------
-#   |           | a b a | b  a  a     可陪對的最大長度： 
+#   |           | a b a | b  a  a     可配對的最大長度： 
 #               ---------             由 prefix function 負責算出
 
 def KMP(T: str, P: str):
